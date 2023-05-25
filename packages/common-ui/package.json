@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "common-ui",
+  "type": "module",
+  "description": "Common UI components",
+  "version": "0.0.1",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "module": "./dist/common-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/common-ui.es.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.2",
+    "vue": "^3.2.47",
+    "vue-tsc": "^1.6.5"
+  }
+}
